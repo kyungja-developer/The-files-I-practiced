@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Html elements</title>
+    <style>
+        .section{
+            width: 100px;
+            height: 100px;
+            color: red;
+            background: blue;
+        }
+        #section{
+            height: 200px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div class="section"></div>
+    <div id="section"></div>
+
+    <hr>
+    <!--title은 요소의 정보(설명)를 지정하며 마우스포인트를 태그에 갖다대면 보이는 부연설명같은 것!-->
+    <h1 style="color:red; background:blue;"></h1>
+    <h2 title="이 부분은 제목2입니다!">제목2</h2>
+    <a href="https://googld.com" title="GOOGLE.COM">Google</a>
+    <div title="DIV 태그입니다.">DIV</div>
+
+
+    <hr>
+    <!--'data-*'는 사용자 정의 데이터 속성을 지정-->
+    <div id="me" data-my-name="SUN" data-my-age="315">SUN</div>
+
+    <hr>
+    <!--draggable drag and drop 사용 가능여부
+    true / false //draggable 안써노면 auto. 드래그 가능인지 불가능한 것인지 브라우저가 판단.-->
+    <div draggable="true" style="width:100px; height:100px; background-color:tomato;">The element to drag.</div>
+
+
+    <hr>
+    <!--hidden은 요소를 숨기지만 숨겨진 이것은 동작이 가능하다! 보이지만 않을 뿐이다.-->
+    <form id="hidden-form" action="/form-action" hidden>
+        <input type="text" name="id" value="Heropy">
+    </form>
+    <button form="hidden-form" type="submit">전송</button>
+
+
+    <hr>
+    <!--웬만하면 tabindex로 지정하지말고 html작성 순서로 tab이동할 수 있게 해라. 논리적 흐름을 방해하기 때문에!-->
+    <input type="text" value="1">
+    <input type="text" value="2">
+    <div tabindex="0">2.5</div><!--비대화형 콘텐츠에 tabindex="0"을 넣어주면 tab사용가능!-->
+    <input type="text" value="3">
+    <input type="text" value="4" tabindex="-1"><!--'-1-'값이면 tab이동 안됨. focus는 됨!'-->
+    <input type="text" value="5">
+
+
+    <hr>
+    <h1>
+        &lt;div&gt;&lt;/div&gt;
+        <!--   '<''>'를 텍스트로서 출력하고 싶다면 &lt; = <  /  &gt; = > ' 
+                &nbsp; = 띄어쓰기 1개
+            & = '엠퍼센드'라고 읽음-->
+    </h1>
+
+
+
+    <script>
+        const section = document.querySelector('.section');
+        const sectionID = document.getElementById('section');
+
+        const me = document.getElementById('me');
+        console.log(me.dataset.myName);
+        console.log(me.dataset.myAge);
+    </script>
+</body>
+</html>

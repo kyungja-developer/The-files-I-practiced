@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="practice.css" rel="stylesheet">
+</head>
+<body>
+    <ol start="4"><!--reversed="reversed"처럼 속성과 값이 값으면 속성 이름으로만 줄여쓸 수 있음-->
+        <li>
+            Apple
+            <ol>
+                <li value="3">Apple</li>
+                <li>Banana</li>
+                <li>Mango</li>
+            </ol>
+        </li>
+        <li>Banana</li>
+        <li>Mango</li>
+    </ol>
+
+    <dl>
+        <dt>Coffee</dt>
+        <dd>Coffee is in the cafe delicious.</dd>
+        <dt>Milk</dt>
+        <dd>Milk is in the cafe delicious.</dd>
+    </dl><!--ul,li로 대체해서 많이 쓴다. css설정 힘들어서. dl안엔 dt,dd외엔 다른 태그 못들어가서.-->
+    <hr />
+    <ul>
+        <li>
+            <dfn>Coffee</dfn><!--definition정의태그!-->
+            <p>Coffee is in the cafe delicious.</p>
+        </li>
+        <li>
+            <dfn>Milk</dfn>
+            <p>Milk is in the cafe <br />delicious.</p>
+        </li>
+    </ul>
+
+    <blockquote cite="https://heropy.blog/2019/04/24/html-css-starter/">
+        인용어쩌고저쩌고이ㅏ러니아
+        럼;ㅣ나얼;ㅣㅏ먼ㅇ;ㅣ라ㅓ니아럼;ㅣ나얼;미ㅏ넝ㄹ;ㅣㅏㄴㅁ얼
+        ㅁ니아러;ㅣㅁ나얼;ㅣㅏㅁ너;이라ㅓㅁㄴ;ㅣ아러;ㅁ니ㅏㅓ
+    
+    </blockquote>
+
+    <q>이용니아ㅓ인용입니다이나럼;ㅣㅏㄴ얼;ㅣㅏㅁ너</q>
+
+    <a href="https://google.com" target="_blank">Google</a>
+    <a href="./README.md" download>README.md</a>
+    <!--download는 속성과 값이 같기 때문에 그냥 download로만 써준다
+    download 안써주고 링크만 써주면 새 창에서 README.md의 내용이 뜬다-->
+</body>
+</html>

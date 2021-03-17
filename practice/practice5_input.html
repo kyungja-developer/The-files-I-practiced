@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>input /label /button /textarea /fieldset, legend</title>
+    <link rel="stylesheet" href="./practice5_input.css" type="text/css">
+</head>
+<body>
+    <!--<form action="/login" id="login-form">
+        우리가 입력값을 보낼 곳의 링크=action
+    </form>-->
+    <input type="text" form="login-form" maxlength="6"><!--사용자가 입력할 수 있는 글자수 제한-->
+    <!--form은 from태그안에 iuput태그가 없어도
+    위의 form태그안에 있는 것처럼 활용할 수 있게 하는 태그
+    그래서 form의 값에 상단 form의 id값을 넣어준다. 연결하는 개념!-->
+    <form action="/login" method="GET">
+        <input type="email" name="id">
+        <input type="password" name="pw">
+        <input type="submit" value="로그인"><!--value=초기값-->
+    </form>
+
+    <input type="number" value="1234" disabled>
+    <!--readonly-읽기전용/ disabled-비활성화//그러나 value값은 남겨둠-->
+    <input type="number" placeholder="숫자를 입력하세요">
+
+    <input type="number" max="8" min="4">
+    <input type="number" step="4"><!--숫자의 증감단위-->
+    <input type="checkbox" checked>
+
+    <div>
+        <input type="file" multiple><!--multiple -> 여러개의 파일 올리기-->
+    </div>
+    <div>
+
+        <form action="/login">
+            <input type="image" src="images/scvd.png" alt="HEROPY" width="100">
+            <!--이 이미지를 제출버튼으로 사용가능-->
+        </form>
+    </div>
+
+    <div>
+        <input type="radio" name="radio1"><!--같은 name을 갖게하면 각각의 radio버튼을-->
+        <input type="radio" name="radio1"><!--하나의 묶음으로 사용하겠다는 것-->
+        <input type="radio" name="radio1" checked>
+    </div>
+
+    <form action="/login">
+        <input type="text" name="id">
+        <input type="password" name="pw">
+        <input type="submit" name="로그인">
+        <input type="reset" name="초기화"><!--자기가 포함돼있는 양식만 초기화시킨다-->
+    </form>
+    <input type="text">
+
+    <hr>
+    <br>
+
+    <!-- 라벨 가능 요소를 참조 / label은 라벨가능요소의 제목을 설정함_______________________________-->
+    <input type="checkbox" id="user-agreement" />
+    <!-- <label for="user-agreement">동의하십니까?</label> -->
+    <label>동의하십니까?</label>
+
+    <!-- 라벨 가능 요소를 포함 -->
+    <label><input type="checkbox" />동의하십니까?</label>
+    <!--label을 매번 아래 넣어서 for쓰고 뭐하기 귀찮으니까
+    아예 label안에 input태그를 만들어버리는 것!-->
+
+    <label>
+        검색&nbsp<input type="search">
+    </label>
+
+    <hr>
+    <br>
+
+    <!--이 두개가 같은 기능이다______________________________________________________________-->
+    <input type="reset" value="초기화">
+    <button type="reset">초기화</button>
+    <input type="submit" value="제출">
+    <button type="submit">제출</button>
+
+    <button onclick="doit()">클릭하세요!</button>
+
+    <hr>
+    <br>
+
+
+    <!--(처음 보여줄 수)row의 기본값이 '2'라서 맨 첨엔 2줄만 보임. 조절가능
+    textarea = '여러줄의 일반 텍스트 양식'_______________________________-->
+    <textarea rows="6" placeholder="설명을 입력하세요!"></textarea>
+    
+    <hr>
+    <br>
+
+    <!--같은 목적의 양식 그룹화fieldset/제목지정legend-->
+        <fieldset>
+            <legend>Coffee Size</legend>
+            <label>
+                <input type="radio" name="size" value="tall" checked>
+                Tall
+            </label>
+            <label>
+                <input type="radio" name="size" value="Grande">
+                Grande
+            </label>
+            <label>
+                <input type="radio" name="size" value="Venti">
+                Venti
+            </label>
+        </fieldset>
+
+    <script>
+        function doit() {   //()괄호를 열고 닫는게 '실행'이라는 명령이다
+            alert('클릭했습니다!');
+        }
+    </script>
+
+</body>
+</html>

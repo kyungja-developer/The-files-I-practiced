@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="./practice3.css">
+</head>
+<body>
+    <table>
+        <tr><!--colspan은 자신의 칸을 기준으로 몇칸을 병합, 확장할까의 속성-->
+            <th colspan="2" id="th-data">데이터</th>
+        </tr>
+        <tr><!--줄-->
+            <th abbr="Type" scope="col" headers="th-data">타입</th><!--제목-->
+            <th abbr="Value" scope="col" headers="th-data">값</th>
+        </tr>
+        <tr>
+            <td>알파벳</td><!--칸-->
+            <td>A</td>
+        </tr>
+        <tr>
+            <td>숫자</td>
+            <td>7</td>
+        </tr>
+    </table>
+    <hr />
+    <table>
+        <caption>데이터 타입과 값</caption>
+        <tr>
+            <th rowspan="2" id="th-data">데이터</th>
+            <th headers="th-data" id="th-type">타입</th>
+            <td headers="th-type">알파벳</td>
+            <td headers="th-type">숫자</td>
+        </tr>
+        <tr>
+            <th headers="th-data" id="th-value">값</th>
+            <td id="th-value">A</td>
+            <td id="th-value">7</td>
+        </tr>
+    </table>
+    <hr />
+    <table>
+        <caption>데이터 타입과 값</caption>
+        <colgroup>
+            <col style="background-color:tomato" span="2"><!--빈태그임. 칸을 의미. 내가 만든 표의 전체 칸수만큼 적어주면 됨-->
+            <col>
+            <col>
+        </colgroup>
+        <tr>
+            <th ></th>
+            <th>타입</th>
+            <th>값</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <td>알바펫</td>
+            <td>A</td>
+        </tr>
+        <tr>
+            <th>2</th>
+            <td>숫자</td>
+            <td>7</td>
+        </tr>
+    </table>
+    <ht />
+    <table>
+        <caption>Fruits</caption>
+        <colgroup>
+            <col span="2" style="background-color: yellowgreen;">
+            <col style="background-color: tomato;">
+        </colgroup>
+        <thead><!--머리글-->
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody><!--본문. 이 머릿글과 본문은태그는 그냥 나누는 용도임-->
+            <tr>
+                <td>F123A</td>
+                <td>Apple</td>
+                <td>$22</td>
+            </tr>
+            <tr>
+                <td>F098B</td>
+                <td>Banana</td>
+                <td>$19</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

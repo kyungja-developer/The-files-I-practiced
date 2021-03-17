@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>select /option /progress</title>
+</head>
+<body>
+    <!--옵션을 선택하는 메뉴-->
+    <select name="fruits"><!--사이트의 family site 만들 때 많이 사용하는 듯-->
+        <optgroup label="내가 좋아하는 과일">
+            <option label="Apple" value="Apple"></option>
+            <option label="Apple" value="Apple"><!--선택적으로 빈태그로 활용가능/ 따라서 이럴때 label과 value써주면 됨.-->
+            <option>Apple</option>
+            <option>Prange</option>
+            <option>Banana</option>
+        </optgroup>
+        <optgroup label="내가 자주먹는 과일">
+            <option selected>Mango</option>
+            <option>Pineapple</option>
+        </optgroup>
+    </select>
+
+
+    <hr>
+
+
+    <input type="text" list="fruits">
+    <!--input에 미리 정의된 datalist의 옵션을 자동완성으로 보여줌.
+    자바없이도 자동완성 쓸 수 있다!
+    datalist의 id값과 input의 list값이 같아야 한다.-->
+
+    <datalist id="fruits">
+        <option>Apple</option>
+        <option>Orange</option>
+        <option>Banana</option>
+        <option>Mango</option>
+        <option>Fineapple</option>
+    </datalist>
+
+    <hr>
+
+    <!--
+    <progress value="100" max="100">70 %</progress>
+    <progress value="0.7" >70 %</progress> max값 없이 쓰고싶다면 0~1사이의 숫자를 value값에 써야함
+    -->
+    <progress value="0" max="100"></progress>
+
+    <script>
+        const progress = document.querySelector('progress');
+        const interval = setInterval(function () {
+            progress.value += 10;
+            if (progress.value >= 100) clearInterval(interval);
+        }, 1000)
+    </script>
+</body>
+</html>
