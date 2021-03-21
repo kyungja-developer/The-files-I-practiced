@@ -1,0 +1,253 @@
+*{
+	margin: 0; padding: 0;
+	list-style: none;
+	font-style: none;
+	font-family: "맑은 고딕"
+	font-weight: 500;
+	font-size: 15px;
+	color: #222328;}
+
+a{
+	text-decoration: none;
+	color: inherit;
+	font-weight: inherit;}
+
+h1,h2,h3,h4,h5,h6{
+	color:inherit;
+	font-weight: inherit;
+	font-size: inherit;}
+
+button{
+	cursor: pointer;}
+
+.clearfix::after{content: ""; display: block; clear: both;}
+
+
+/* COMMON */
+#wrap{
+	width: 1000px;}
+
+
+/* HEADER */
+header{
+	width: 200px;
+	height: 650px;
+	background-color: #ef8ea5;
+	position: fixed;
+	top:0;
+	left:0;}
+
+#logo{
+	width: 200px;
+	height: 40px;
+	padding-top: 30px;}
+
+
+/* NAV */
+/* 중요! 헤더아코디언형태는 만들 때, nav, li에 height값 주지 말 것.
+유동적으로 움직이기 위해 */
+nav{
+	width: 180px;
+	margin: 20px auto;}
+
+nav li{
+	width: 180px;
+	line-height: 30px;
+	text-align: center;
+	transition: all .4s;}
+
+nav li:hover{
+	background-color: #c71e46;
+	color: #fff;}
+
+.submenu{
+	width: 100%;
+	background-color: rgba(255,255,255,.8);
+	display: none;}
+
+.submenu li:hover{
+	background-color: #f463885;}
+
+
+/* 본문(메인상자) */
+#main{
+	width: 800px;
+	margin-left: 200px;}
+
+
+/* 이미지슬라이드 */
+#imgslide{
+	width: 100%;
+	height: 350px;
+	overflow: hidden;}
+
+#imgslide a{
+	width: 100%;
+	height: 350px;
+	display: block;}/*상자형태로 바꿔서 a태그 있던 여백 없애고 가로세로값을 갖게 함*/
+
+
+/* 콘텐츠 */
+#no_ga, #banner, #go{
+	width: 250px;
+	height: 200px;
+	float: left;}
+
+
+/* 공지사항/갤러리 */
+#no_ga{
+	width: 298px;}
+
+#text_box{
+	width: 148px;
+	height: 30px;
+	margin-left: 10px;
+	border: 1px solid #000;
+	border-bottom: none;}
+
+#no_tex, #ga_tex{
+	width: 73px;
+	height: 31px;
+	float: left;
+	font-weight: 900;
+	text-align: center;
+	font-size: 16px;
+	line-height: 31px;
+	-background-color: #fff;}
+
+#ga_tex{
+	border-left: 1px solid #000;}
+
+#text_box li.on{
+	background-color: #c71e46;
+	color: #fff;}
+
+#con_box{
+	width: 100%;
+	height: 168px;
+	border: 1px solid #000;}
+
+#notice, #gallery{
+	width: 300px;
+	height: 170px;
+	position: absolute;}
+
+#gallery{
+	display: none;}
+
+table{
+	width: 100%;
+	border-collapse: collapse;}/* 테이블태그 여백없애기 */
+
+tr td{
+	font-size: 12px;
+	font-weight: 600;
+	padding: 4.5px;
+	padding-top: 9px;
+	padding-bottom: 9px;}
+
+td a{
+	font-size: 12px;}
+td a:hover{
+	text-decoration: underline;}
+table tr:nth-child(2n){
+	background: rgba(153,153,153,.5);}
+
+#gallery li{
+	width: 90px;
+	height: 148px;
+	margin-top: 7.5px;
+	margin-left: 7.5px;
+	float: left;
+	transition: all .4s;}
+
+#gallery li img{
+	width: 100%;
+	height: 100%;}
+
+#gallery li:hover{
+	opacity: 70%;}
+
+/* banner/바로가기 */
+#banner a, #go a{
+	width: 100%;
+	display: block;}
+
+#banner img, #go img{
+	padding-top:3px;
+	padding-left: 8px;}
+
+/* 레이어팝업(모달) */
+#pop_body{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.6);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	display: none;}
+
+#pop_in{
+	width: 500px;
+	height: 230px;
+	position: fixed;
+	top: 130px;
+	left: calc(50% - 250px);
+	background-color: #fff;}
+
+#pop_in h3{
+	font-size: 20px;
+	font-weight: 900;
+	padding: 15px; 
+	padding-left: 25px;
+	border-bottom: 1px solid #ccc;}
+
+#pop_in p{
+	padding: 15px;
+	padding-left: 25px;
+	line-height: 25px;}
+
+#pop_in button{
+	width: 50px;
+	height: 30px;
+	display: block;
+	margin: 10px auto;
+	border: none;
+	border-radius: 10px;}
+
+#pop_in button:hover{
+	background-color: #c71e46;
+	color: #fff;}
+
+
+/* FOOTER */
+footer{
+	width: 100%;
+	height: 100px;
+	background-color: #949494;}
+
+footer li{
+	float: left;}
+
+#f_logo{
+	width: 200px;
+	height: 40px;
+	padding-top: 30px;}
+
+#menu, #copy{
+	width: 600px;}
+
+#menu span, #copy span{
+	color: #fff;
+	display: block;
+	text-align: center;
+	line-height: 50px;}
+
+#menu span{
+	width: 100px;
+	float: left;
+	margin-left: 70px;
+	}
+
+#menu span:first-child{
+	margin-left: 80px;}
