@@ -1,0 +1,37 @@
+.container{
+    width: 100px;
+    height: 100px;
+    background: tomato;
+}
+
+.container2{
+    width: 10em;/*160px*/
+    font-size: 16px;
+    height: 20em;
+    background: blue;
+}
+
+.container3{
+    width: 160px;
+    font-size: 16px;
+    height: 320px;
+    background: skyblue;
+}
+
+.container4{
+    width: 50rem;/*(=800px) html의 기본 폰트사이즈인 16px을 기준으로 함*/
+    height: 50rem;
+    background: powderblue;
+}
+
+.container5{
+    width: 20vw;
+    height: 20vh;
+    background: orange;
+}
+
+.container6{
+    width: 50vmax;
+    height: 50vmin;
+    background-color: yellowgreen;
+}
