@@ -1,0 +1,85 @@
+*{
+    margin:0; padding:0;
+    list-style: none;}
+.box{
+    display: flex;
+}
+.box1{
+    width: 100px;
+    height: 100px;
+    border: 10px solid black;
+    margin: 10px;
+    
+}
+
+.box2{
+    width: 100px;
+    height: 100px;
+    border: 10px dotted black;
+    margin: 10px;
+}
+
+.box3{
+    width: 100px;
+    height: 100px;
+    border: 10px dashed black;
+    margin: 10px;
+}
+
+.box4{
+    width: 100px;
+    height: 100px;
+    border: 10px double black;
+    margin: 10px;
+}
+
+.box5{
+    width: 100px;
+    height: 100px;
+    border: 10px groove red;
+    margin: 10px;
+}
+
+.box6{
+    width: 100px;
+    height: 100px;
+    border: 10px ridge red;
+    margin: 10px;
+}
+
+.box7{
+    width: 100px;
+    height: 100px;
+    border: 10px inset red;/*들어가있는*/
+    margin: 10px;
+}
+.box8{
+    width: 100px;
+    height: 100px;
+    border: 10px outset red;/*나와있는*/
+    margin: 10px;
+}
+
+.box9{
+    width: 100px;
+    height: 100px;
+    border: 10px outset transparent;
+    margin: 10px;
+    background: orange;
+}
+
+/*
+기타속성
+border-top
+border-top-width
+border-top-style
+borert-top-color
+상우하좌별로 개별속성을 적용할 수 있다~
+.
+.
+.*/
+
+/*선 두께만큼 요소의 크기가 커진다
+box-sizing으로 조정가능~얘는 요소의 크기 계산 기준을 지정해주는 속성으로
+요소에 정해놓은 크기 안에서 효과가 적용되는것!
+padding이나 border를 적용했을 때 요소의 크기에 변동이 없다~*/
