@@ -1,0 +1,91 @@
+article{
+  
+}
+article .picture{
+  width: 300px;
+  height: 200px;
+  background: tomato;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+article .text{
+  clear: left;
+}
+
+.box{
+    width: 150px;
+    height: 100px;
+    background: blue;
+    color: white;
+    font-size: 30px;
+    margin: 10px;
+    float: right;
+}
+.box4{
+    width: 200px;
+    height: 150px;
+    background: orange;
+    clear: both;
+}
+
+
+.float-left{
+    width: 100px;
+    height: 100px;
+    background: red;
+    float: left;
+    margin: 10px;
+}
+.next{
+    background: powderblue;
+    width: 100px;
+    height: 100px;
+    clear: both;
+    margin: 10px;
+}
+
+
+.parent{
+  overflow: hidden;/*or 'auto'*/
+  width: 250px;
+  height: 120px;
+}
+.child{
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  margin: 10px;
+}
+.next2{
+  width: 100px;
+  height: 100px;
+  background: orange;
+  margin: 10px;
+}
+
+
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: block; /* or 'table'*/
+}
+.child{
+  float: left;
+}
+
+
+
+.float-box{
+  width: 100px;
+  height: 100px;
+  background: pink;
+  margin: 10px;
+  float: left;
+}
+.new-box{
+  width: 250px;
+  height: 250px;
+  background: red;
+}
