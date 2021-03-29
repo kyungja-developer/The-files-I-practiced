@@ -89,3 +89,12 @@ article .text{
   height: 250px;
   background: red;
 }
+
+
+span{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background: tomato;
+  float: left;
+}
