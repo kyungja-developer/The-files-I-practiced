@@ -31,3 +31,34 @@
   bottom: 40px;
   left: 160px;
 }
+
+.grand-parent{
+  width: 400px;
+  height: 300px;
+  padding: 30px 100px 100px 30px;
+  border: 4px dashed lightgray;
+}
+.parent-a{
+  width: 400px;
+  height: 300px;
+  border: 4px dashed gray;
+  position: relative;
+}
+.child-two{
+  width: 120px;
+  height: 80px;
+  background: tomato;
+  border: 4px dashed red;
+  border-radius: 10px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.absolute{
+  position: absolute;/*다른 형제요소에 영향X
+  위치상 부모요소 필요!
+  없으면 뷰포트기준*/
+  bottom: 50px;
+  right: 10px;
+}
