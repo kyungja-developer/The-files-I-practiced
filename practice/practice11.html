@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="practice11.css" type="text/css">
 </head>
 <body>
+    <h1>Relative</h1>
     <div class="parent">
         <div class="child"></div>
     </div>
@@ -22,17 +23,74 @@
     -->
 
     <hr>
+    <h1>Absolute</h1>
     <div class="box">1</div>
     <div class="box relative">2</div><!--실제 2번 박스는 3번 위에 있고, 움직이고 있는건 홀로그램 같은거다!-->
     <div class="box">3</div><!--2번 박스는 1번 박스에 영향을 받고 3번 박스에 영향을 주고있다-->
 
     <hr>
+    <h1>fixed</h1>
     <div class="grand-parent">
         <div class="parent-a">
           <div class="child-two">1</div>
-          <div class="child-two absolute">2</div>
-          <div class="child-two">3</div>
+          <div class="child-two absolute">absolute</div>
+          <div class="child-two fixed">fixed</div>
+        </div>
+    </div>
+
+    <hr>
+    <h1>Sticky</h1>
+    <div class="container">
+        <div class="section">
+        <h1>Title 1</h1>
+        </div>
+        <div class="section">
+            <h1>Title 2</h1>
+        </div>
+        <div class="section">
+            <h1>Title 3</h1>
+        </div>
+        <div class="section">
+            <h1>Title 4</h1>
+        </div>
+        <div class="section">
+            <h1>Title 5</h1>
+        </div>
+        <div class="section">
+            <h1>Title 6</h1>
+        </div>
+        <div class="section">
+            <h1>Title 7</h1>
+        </div>
+        <div class="section">
+            <h1>Title 8</h1>
         </div>
       </div>
+
+
+      <hr>
+      <h1>stack order</h1>
+      <pre>
+        stack순서
+        =
+        position > z-index > HTML마지막 코드
+        </pre>
+        <div class="box-group">
+          <div class="boxa box1">1</div>
+          <div class="boxa box2">2</div>
+          <div class="boxa box3">3</div>
+          <div class="boxa box4">4</div>
+          <div class="boxa box5">5</div>
+        </div>
+
+
+        <hr>
+        <h1>display변화</h1>
+        <pre>
+            flex와 inline-flex는 display의 변화가 없다. position속성 효과도 없다. 
+            inline ~ table속성은 display가 block으로 바뀐다. 
+            float, absolute, fixed도 block!
+        </pre>
+        <span>INLINE</span>
 </body>
 </html>
