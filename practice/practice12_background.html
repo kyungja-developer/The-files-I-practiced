@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Background</title>
+    <link rel="stylesheet" href="practice12.css" type="text/css" >
+</head>
+<body>
+    <pre>
+        color       배경색상                          기본값: transparent
+        image       하나 이상의 배경 이미지            기본값: none
+        repeat      배경 이미지의 반복                 기본값: repeat
+        position    배경 이미지의 위치                 기본값: 0 0
+        attachment  배경 이미지의 스크롤 여부(특성)     기본값: scroll
+
+        background: 색상 이미지경로 반복 위치 스크롤특성;
+        각 속성은 생략 가능
+    </pre>
+
+
+    <h1>Color</h1>
+    <div class="color">color</div>
+
+
+    <hr>
+    <h1>Image</h1>
+    <pre> 
+        background-image: url("경로")
+
+        -다중이미지 삽입시
+        ex) 
+        (개별속성)backgound-image: url("경로"), url("경로"), url("경로");
+        또는
+        (단축속성)
+        background: url("경로") no-repeat, 
+        url("경로") no-repeat 100px 50px,
+        url("경로") repeat-x;
+
+    </pre>
+    <div class="box"></div>
+
+    <hr>
+    <h1>Repeat</h1>
+    <div class="box-a"></div>
+
+    <hr>
+    <h1>Position</h1>
+    <pre>
+        값이 단위인 경우:background-position: X축 Y축; (x,y 순서 바꾸면 안됨)
+        값이 방향인 경우 : background-position: 뱡향1 방향2(방향 순서 바껴도 됨. e.g)right bottom -> bottom right)
+    </pre>
+    <div class="box-b"></div>
+
+    <hr>
+    <h1>Attachment</h1>
+    <pre>
+        요소가 스크롤 될 때!
+    </pre>
+    <section class="section1"></section>
+    <section class="section2"></section>
+    <section class="section3"></section>
+    <section class="section4"></section>
+    <section class="section5"></section>
+    <h1>Attachment-local</h1>
+    <div class="container">
+        <div class="for-scroll"></div>
+    </div>
+
+
+    <hr>
+    <h1>Size</h1>
+    <pre>
+        bakcground-size: width height; / width만 입력하면 비율에 맞게 지정됨. 
+        & cover : 배경 이미지의 크기 비율을 유지하며, 요소의 더 넓은 너비에 맞춰짐. 이미지 잘릴 수 있음!
+        & contain : 배경 이미지 크기 비율을 유지. 요소의 더 짧은 너비에 맞춰짐. 이미지가 잘리지 않음!
+    </pre>
+    <div class="box-d"></div>
+</body>
+</html>
