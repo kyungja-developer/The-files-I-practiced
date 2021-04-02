@@ -1,0 +1,124 @@
+*{margin:0; padding:0; }
+.box{
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    marign: 50px;
+    /*transition-property(전환할 효과 이름):width,
+      background;
+    transition-duration(지속시간): 1s;*/
+    transition: width 1s, background 1s;
+  }
+  .box:hover{
+    width: 300px;
+    background: dodgerblue;
+  }
+
+
+  .box-a{
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    marign: 50px;
+    transition:all 2s ease-in;/*all은 기본값임*/
+    /*transition-timing-function: linear;*/
+  }
+  .box-a:hover{
+    width: 300px;
+    background: dodgerblue;
+  }
+
+
+  .box-b{
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    marign: 50px;
+    transition: 2s steps(4);
+    /*효과를 횟수만큼 쪼개서 보여준다*/
+  }
+  .box-b:hover{
+    width: 300px;
+    background: dodgerblue;
+  }
+
+
+  .box-c{
+    width: 100px;
+    height: 100px;
+    background: tomato;
+    marign: 50px;
+    transition: 2s 2s;
+    /*뒤쪽이 delay*/
+  }
+  .box-c:hover{
+    width: 300px;
+    background: dodgerblue;
+  }
+
+
+
+/*------------------------------------*/
+
+  .trans{
+    width: 200px;
+    height: 200px;
+    background: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+    /*potision: relative;
+    left: 100px;
+    top: 30px;*/
+    transform: translate(100px, -30px);
+  }
+
+
+
+  .trans-a{
+    width: 200px;
+    height: 200px;
+    background: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+    transition: 1s;
+  }
+  .trans-a:hover{
+    /*position: relative;
+    left: 30px;
+    top: 30px; position은 배치하고 끝임!*/
+    transform: translate(30px, 30px);
+  }
+
+
+  .trans-b{
+    width: 200px;
+    height: 200px;
+    background: tomato;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #fff;
+    transition: 1s;
+    margin: 100px;
+  }
+  .trans-b:hover{
+    /*transform: scale(.8);*/
+    transform: translate(120px, 110px) skew(10deg, 5deg) scale(.3);
+    /*사이에 띄어쓰기로 다중입력 가능*/
+  }
+
+
+  img{
+    width: 300px;
+    border: 1px solid lightgray;
+    /*perspective함수는 맨 앞에 선언되어야함*/
+    transition: 1s;
+    transform:  perspective(500px) rotateX(180deg);
+  }
