@@ -55,7 +55,55 @@
         matrix(n,n,n,n,n,n....) 3차원 변환 효과 단위 없음.
     </pre>
 
-    <img src="https://heropy.blog/css/images/logo.png" alt="로고" >
+    <img class="first" src="https://heropy.blog/css/images/logo.png" alt="로고" >
+
+    <hr>
+    <h3>기준점 바꾸기transform-origin</h3>
+    <img class="second" src="https://heropy.blog/css/images/logo.png" alt="로고" >
+
+    <hr>
+    <h3>transform-style: preserve-3d / 기본값: flat;</h3>
+    <div class="perspective">
+        <div class="grand-parent">
+          <div class="parent">
+            <img class="third" src="https://heropy.blog/css/images/logo.png" alt="로고" >
+          </div>
+        </div>
+      </div>
+
+
+    <hr>
+    <h3>perspective : '하위 요소'를 관찰하는 원근거리를 설정. perspective()함수와 다름!</h3>
+    <pre>
+        -관찰대상이 여럿일 때!-
+        perspective속성은 관찰 대상의 '부모요소'에 적용해 '하위요소'들을 관찰하는 원근거리 설정. 기준점은 perspective-origin
+        -관찰대상이 하나일 때-
+        transform: perspective(); 는 '관찰 대상'에 적용해 그 관찰대상에 대한 원근거리를 설정. 기준점은 transform-origin.
+
+        perspective-origin 
+        x축 = left, right, center, %, 단위 / 기본값 : 50%
+        Y축 = top, bottom, center, %, 단위 / 기본값 : 50%;
+        perspective-origin이 적용된 요소의 하위요소들을 관찰할 수 있다. 
+        한마디로, 내 눈이 어디에 위치해있냐 같은 느낌
+    </pre>
+    <div class="perspective-a">
+        <div class="grand-parent-a">
+            <div class="parent-a">
+                <img class="third-a" src="https://heropy.blog/css/images/logo.png" alt="로고">
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+    <h3>backface-visivility : 3D 변환으로 회전된 요소의 뒷면 숨김을 설정<br>
+    기본은 visible , 다른 값으로 hidden 숨김이 있다.</h3>
+
+    <hr>
+    <h3>matrix(a,b,c,d,e,f)<br>
+    scale , skew , translate , rotate 등<br>
+    어려워서 잘 못쓰겄다. transform함수를 사용해도 브라우저에 의해 matrix함수로 계산되어 적용된다.<br>
+    2D변환함수는 matrix로, 3D 변환함수는 matrix3d(총 16개 함수)로 변환된다.</h3>
 
 
 

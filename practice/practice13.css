@@ -115,10 +115,79 @@
   }
 
 
-  img{
+  .first{
     width: 300px;
     border: 1px solid lightgray;
     /*perspective함수는 맨 앞에 선언되어야함*/
     transition: 1s;
     transform:  perspective(500px) rotateX(180deg);
+  }
+
+  .second{
+    width: 200px;
+    border: 1px solid lightgray;
+    transition: 1s;
+    transform: rotate(45deg);
+    transform-origin: left bottom;/*x축 y축*//*효과가 적용되는 기준점 바꾸기!*/
+  }
+
+
+  .perspective{
+    width: 200px;
+    perspective: 500px;
+    /*3d에서 perspective()함수와는 다름.*/
+    padding: 70px;
+  }
+  .grand-parent{
+    width: 200px;
+    border: 3px solid dodgerblue;
+    transition: 1s;
+    transform: rotateX(-45deg);
+    /*transform-style: flat;자식요소에 3차원 동작효과를 적용하지 않는다.*/
+    transform-style: preserve-3d;
+  }
+  .parent{
+    width: 200px;
+    border: 3px solid tomato;
+    transition: 1s;
+    transform: rotateY(45deg);
+    transform-style: preserve-3d;
+    /*단어 뜻 그대로 '자신의 자식'까지 3d효과를 보존하겠다!*/
+  }
+  .third{
+    width: 200px;
+    border: 3px solid lightgray;
+    transition: 1s;
+    transform: rotateX(45deg);
+  }
+
+
+  .perspective-a{
+    width: 200px;
+    perspective: 500px;
+    /*3d에서 perspective()함수와는 다름.*/
+    perspective-origin: 100% 200%;
+    padding: 70px;
+  }
+  .grand-parent-a{
+    width: 200px;
+    border: 3px solid dodgerblue;
+    transition: 1s;
+    transform: rotateX(-45deg);
+    /*transform-style: flat;자식요소에 3차원 동작효과를 적용하지 않는다.*/
+    transform-style: preserve-3d;
+  }
+  .parent-a{
+    width: 200px;
+    border: 3px solid tomato;
+    transition: 1s;
+    transform: rotateY(45deg);
+    transform-style: preserve-3d;
+    /*단어 뜻 그대로 '자신의 자식'까지 3d효과를 보존하겠다!*/
+  }
+  .third-a{
+    width: 200px;
+    border: 3px solid lightgray;
+    transition: 1s;
+    transform: rotateX(45deg);
   }
