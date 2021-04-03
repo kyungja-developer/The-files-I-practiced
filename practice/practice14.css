@@ -1,0 +1,17 @@
+.box-a{
+    width: 100px;
+    height: 100px;
+    background: tomato;
+  }
+  .box-a:hover{
+    animation: first-animation 2s infinite/*무한반복*/ alternate/*번갈아서 나오게*/;
+  }
+  
+  @keyframes first-animation{
+    0%{
+      width: 100px;
+    }
+    100%{
+      width: 500px;
+    }
+  }
