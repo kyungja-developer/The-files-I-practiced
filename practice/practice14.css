@@ -1,3 +1,6 @@
+*{margin:0; padding: 0;}
+
+
 .box-a{
   width: 100px;
   height: 100px;
@@ -16,6 +19,9 @@
     width: 500px;
   }
 }
+
+
+
 
 
 .box-b{
@@ -44,6 +50,8 @@
 }
 
 
+
+
 .box-c{
   width: 100px;
   height: 100px;
@@ -69,3 +77,52 @@
     background: yellowgreen;
   }
 }
+
+
+
+.box-d{
+  width: 150px;
+  height: 100px;
+  border-radius: 10px;
+  margin: 10px;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box1{background: tomato;
+}
+.box2{background:dodgerblue;
+}
+.box3{background: yellowgreen;
+}
+
+.box1:hover{
+  animation: size-up 1s 2 alternate 0s linear;
+  /*animation-timing-function: linear;
+  animation-delay: 0s;*/
+}
+.box2:hover{
+  animation: size-up 1s 2 alternate linear 1s;
+  /*animation-timing-function: linear;
+  animation-delay: 1s;*/
+}
+.box3:hover{
+  animation: size-up 1s 2 alternate linear -1s;
+  /*animation-timing-function: linear;
+  animation-delay: -1s;
+  /*1초를 건너뛰고 애니메이션의 0초가 아닌 1초부터 시작한다!
+  duration과 delay 순서만 안바뀌면 timing-function이랑 delay순서 바껴도 상관없다. */
+}
+
+@keyframes size-up{
+  0%{
+   width: 150px; 
+  }
+  100%{
+    width: 500px;
+  }
+}
+
+
