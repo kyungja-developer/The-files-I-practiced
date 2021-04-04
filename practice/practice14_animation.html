@@ -22,7 +22,50 @@
         }
     </pre>
 
+    <hr />
     <div class="box-b"></div>
+    <pre>
+        .box-b:hover{
+            animation: my-animation 3s infinite alternate;
+          }
+          @keyframes my-animation{
+            0%{
+              width: 100px;
+              background: orange;
+            }
+            75%{
+              width: 500px;
+              background: dodgerblue;
+            }
+            100%{
+              width: 300px;
+              background: yellowgreen;
+            }
+          }
+    </pre>
+
+    <hr />
+    <div class="box-c"></div>
+    <pre>
+        .box-c:hover{
+            animation: my-s-animation;
+            animation-duration: 1000ms;
+          }
+          @keyframes my-s-animation{
+            0%{
+              width: 100px;
+              background: yellow;
+            }
+            75%{
+              width: 500px;
+              background: dodgerblue;
+            }
+            100%{
+              width: 300px;
+              background: yellowgreen;
+            }
+          }
+    </pre>
 
 
 </body>

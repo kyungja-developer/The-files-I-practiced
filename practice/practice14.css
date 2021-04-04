@@ -42,3 +42,30 @@
     background: yellowgreen;
   }
 }
+
+
+.box-c{
+  width: 100px;
+  height: 100px;
+  background: yellow;
+  border-radius: 10px;
+}
+
+.box-c:hover{
+  animation: my-s-animation;
+  animation-duration: 1000ms;
+}
+@keyframes my-s-animation{
+  0%{
+    width: 100px;
+    background: yellow;
+  }
+  75%{
+    width: 500px;
+    background: dodgerblue;
+  }
+  100%{
+    width: 300px;
+    background: yellowgreen;
+  }
+}
