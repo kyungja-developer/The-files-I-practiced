@@ -180,3 +180,44 @@
     background: yellowgreen;
   }
 }
+
+
+
+
+body{
+  padding: 20px;
+}
+
+.box-g{
+  width: 150px;
+  height: 100px;
+  background: blue;
+  border-radius: 10px;
+  animation: size-up 3s linear infinite alternate;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-g::before{
+  content: "Running";
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+.box-g:hover{
+  animation-play-state: paused;
+  background: dodgerblue;
+}
+.box-g:hover::before{/*box-g에 hover를 하면 before는 ~*/
+  content: "Paused";
+  color: black;
+}
+
+@keyframes size-up{
+  0%{
+    width: 150px;
+  }
+  100%{
+    width: 100%;
+  }
+}
