@@ -131,7 +131,7 @@
 .box-e{
   width: 100px;
   height: 100px;
-  background: tomato;
+  background: green;
   border-radius: 10px;
   margin: 30px;
   animation: movemove 2s;
@@ -155,5 +155,28 @@
   75%{transform: translate(0, 100px);
   }
   100%{transform: translate(0, 0);
+  }
+}
+
+
+
+
+.box-f{
+  width: 100px;
+  height: 100px;
+  background: blue;
+  border-radius: 10px;
+  margin: 30px;
+  animation: movemove-s 2s 2s;
+  animation-fill-mode: both;
+}
+@keyframes movemove-s{
+  0%{
+    transform: translate(100px, 100px);
+    background: dodgerblue;
+  }
+  100%{
+    transform: translate(300px, 100px);
+    background: yellowgreen;
   }
 }
