@@ -70,3 +70,25 @@
     border: 4px dashed green;
     border-radius: 10px;
   }
+
+
+
+  .container-e{
+    border: 4px solid;
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    align-items: baseline;
+    /*각 줄이 차지하는 부분에서 정렬이 결정. 한줄한줄!*/
+  }
+  .container-e .item-e{
+    width: 120px;
+    height: 100px;
+    background: dodgerblue;
+    border: 4px dashed blue;
+    border-radius: 10px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
