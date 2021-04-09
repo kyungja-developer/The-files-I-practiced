@@ -143,3 +143,24 @@
     이미 가로너비가 설정돼 있을 때
     1:2라고 해도 완벽하게 2배가 되는건 아니다.*/
   }
+
+
+
+  .container-h{
+    border: 4px solid;
+    display: flex;
+  }
+  .container-h .item-h{
+    height: 100px;
+    background: purple;
+    color: #fff;
+    border: 4px dashed red;
+    border-radius: 10px;
+    flex-grow: 1;/*content를 제외한 나머지 여백들이 1:1:1로 정해짐
+    flex-basis가 auto일 때!*/
+    flex-basis: 100px;
+  }
+  
+  .container-h .item-h3{
+    flex-grow: 2;
+  }
