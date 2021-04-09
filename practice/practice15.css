@@ -180,3 +180,34 @@
     /*flex: 1;1 1 0 */
     flex: 1 1 auto;
   }
+
+
+
+  .container-j{
+    height: 400px;
+    border: 4px solid;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  .container-j .item-j{
+    width: 100px;
+    height: 100px;
+    background: black;
+    color: #fff;
+    border: 4px dashed red;
+    border-radius: 10px;
+  }
+  
+  .container-j .item-j2{
+    align-self: center;
+  }
+  
+  .container-j .item-j4{
+    align-self: flex-start;
+  }
+  
+  .container-j .item-j7{
+    align-self: stretch;
+    height: auto;
+  }
