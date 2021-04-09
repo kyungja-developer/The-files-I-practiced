@@ -155,6 +155,9 @@
       <pre>
         공간배분전 item의 기본 너비를 설정. 
         기본값 auto
+        auto는 content를 제외한 item의 여백을,
+        0은 전체 너비를,
+        단위지정(px,em등)은 지정한 너비만큼 뺀 item의 여백을.
       </pre>
       <div class="container-h">
         <div class="item-h item-h1">Good job!</div>
@@ -162,6 +165,18 @@
         <div class="item-h item-h3">Hello world~~</div>
       </div>
 
+      <hr>
+      <h2>flex단축속성</h2>
+      <pre>
+        grow 0/ shrink 1/ basis 0 순서
+        !!단축속성을 쓸 때 basis의 기본값은 '0'이다! 
+        flex-basis를 쓸 땐 auto
+      </pre>
+      <div class="container-i">
+        <div class="item-i item-i1">Good job!</div>
+        <div class="item-i item-i2">A</div>
+        <div class="item-i item-i3">Hello world~~</div>
+      </div>
 
 </body>
 </html>
