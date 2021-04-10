@@ -1,0 +1,13 @@
+.container{
+  display: grid;
+  /*grid-template-rows: 100px 100px;행*/
+ /* grid-template-columns: 2fr 1fr 1fr;열 / 
+  fr은 비율을 의미 - 1fr 1fr은 1:1의 의미*/
+  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 1fr);
+  /*repeat(n번을 반복 , 단위*/
+  border: 4px solid lightgray;
+}
+.item{
+  border: 2px dashed red;
+}
