@@ -5,8 +5,10 @@
   grid-template-areas:
     "header header header"
     "main aside aside"
-    "name footer footer"
+    "name . ."
     "age footer footer"; /*footer부분에 .했는데 왜 비지 않고 깨지나?aside 하나엔 .해도 안깨졌는데*/
+    /*영역이 직사각형이 아니면 유효하지 않은 그리드를 생성하게 됨!
+    아래 가운데  footer를 공란으로 두면 footer의 영역이 직사각형이 아니기 때문에 오류가 나는 것*/
   border: 4px solid red;
 }
 .item{
