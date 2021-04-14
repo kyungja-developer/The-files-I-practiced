@@ -19,7 +19,31 @@
         <div class="item">FOOTER</div>
         <div class="item">NAME</div>
         <div class="item">AGE</div>
-      </div>
+    </div>
+
+
+      <pre>
+        grid-area는 grid-row-start/end , grid-column-start/end의 단축속성도 됨. 
+        하지만!
+        grid-template-area로 영역 이름을 설정할 경우
+        grid-row / grid-column 개념은 무시됨.
+
+        grid-area: < grid-row-start > / < grid-column-start > / < grid-row-emd > / < grid-column-start >
+        'row column row colum 순서' ( row row column column 순서 아님! )
+        ex)
+        grid-row: 2/3;
+        grid-column: span 2 / -1;
+        =
+        grid-area: 2 / span 2 / 3 / -1;
+
+
+        또는 원래대로
+        grid-area: 영역이름;
+
+    </pre>
+    <div class="container2">
+        <div class="item2">HEADER</div>
+    </div>
     
 </body>
 </html>

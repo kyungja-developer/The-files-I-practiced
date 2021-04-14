@@ -10,6 +10,28 @@
     <h1>grid-row / grid-column (item 속성)</h1>
     <pre>
         원하는 item을 원하는 위치에 놓게하기 위한 것.
+
+        grid-row = grid-row-start와 grid-row-end의 단축속성
+        각 속성을 '/'로 구분!
+
+        grid-row-start: 1;
+        grid-row-end: 2;
+        = grid-row: 1/2;
+
+        *span = n개를 확장해라
+        gird-row-start:2;
+        grid-row-end: span3;
+        = start를 기준으로 grid-row: 2 / span3;
+        = grid-row: 2 / 5;
+
+        grid-row-start: span 3;
+        grid-row-end: 4;
+        =end를 기준으로 grid-row: span3 / 4;
+        =grid-row: 1 / 4;
+
+
+
+
     </pre>
     <div class="container">
         <div class="item">1</div>
