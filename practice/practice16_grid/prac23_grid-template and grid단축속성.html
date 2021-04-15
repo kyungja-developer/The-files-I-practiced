@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <link rel="stylesheet" href="prac23.css">
+</head>
+<body>
+    <h1>grid-template</h1>
+    <h2>grid-template-rows, gird-template-columns, grid-template-areas의 단축속성</h2>
+    <pre>
+        ex) grid-template: grid-template-rows / grid-template-columns;
+        grid-template: grid-template-areas;
+
+        또는
+
+        grid-template:
+            [1행시작선이름] "AREAS" 행너비 [1행끝선이름]
+            [2행시작선이름] "AREAS" 행너비 [2행끝선이름]
+            / < grid-template-columns >;
+
+        ( grid-area는 item의 속성이고, grid-template-areas는 container 속성이란거 잊지말자!)
+    </pre>
+    <div class="container">
+        <header>HEADER</header>
+        <main>MAIN</main>
+        <aside>ASIDE</aside>
+        <footer>FOOTER</footer>
+      </div>
+
+    <br><br>
+    <hr>
+    <h1>grid</h1>
+    <h2>grid-template-xxx와 grid-auto-xxx의 단축 속성</h2>
+    <pre>
+        grid: grid-template-rows / grid-template-columns;
+        ex)
+        grid: 100px 200px / afr 2fr;
+        = grid-template-rows: 100px 200px;
+          grid-template-columns: 1fr 2fr;
+
+          <hr>
+        grid: grid-template;
+        ex)
+        grid :
+            "header header header" 80px
+            "main . aside" 350px
+            "footer footer footer" 130px
+        / 2fr 100px 1fr;
+        =
+        grid-template:
+            "header header header" 80px
+            "main . aside" 350px
+            "footer footer footer" 130px
+        / 2fr 100px 1fr;
+
+        <hr>
+        ***auto-flow는 설정하지 않은 item 배치. auto-rows, columns는 암시적 행렬위치!
+
+        grid: grid-template-rows/ grid-auto-flow grid-auto-columns;
+        ex)
+        grid: 100px 100px / auto-flow(column임) 150px;
+        =
+        grid-template-rows: 100px 100px;
+        grid-auto-glow: columns;
+        grid-auto-columns: 150px;(암시적 열)
+        
+        <hr>
+        grid: grid-auto-flow grid-auto-rows / grid-template-columns;
+        ex)
+        grid: auto-flow(row임) 150px / 100px 100px;
+        =
+        grid-template-columns: 100px 100px;
+        grid-auto-flow: row;
+        grid-auto-rows: 150px;(암시적 행)
+        /
+        grid: auto-flow dense 150px / 100px 100px;
+        =
+        grid-template-columns: 100px 100px;
+        grid-auto-flow: row dense;
+        grid-auto-rows: 150px;
+    </pre>
+    
+</body>
+</html>
