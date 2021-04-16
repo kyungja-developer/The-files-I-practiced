@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <link rel="stylesheet" href="prac23.css">
+</head>
+<body>
+    <h1>align-content / justify-content</h1>
+    <h2>그리드 콘텐츠를 수직(열축)&수평(행축) 정렬</h2>
+    <pre>
+        align-content:그리드 콘텐츠(내용물-item전체뭉텅이)의 세로 너비가 그리드 컨테이너(Container)보다 작아야 함.
+        justify-content: 그리드 콘텐츠의 가로 너비가 그리드 컨테이너보다 작아야한다.
+        normal : 기본값. stretch와 같음. 
+        start / center / end / 
+        space-around : 각 행 위아래에 여백을 고르게 정렬
+        space-between : 첫 행은 시작점에, ?끝 행은 끝점에 정렬. 나머지 여백은 고르게 정렬
+        space-evenly : 모든 여백 고르게 정렬(around와 구별할 것)
+        stretch : 열 축을 채우기 위해 그리드 콘텐츠를 늘림
+    </pre>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+      </div>
+    
+
+      <h1>align-items / justify-items</h1>
+    <h2>그리드 아이템(items)들을 수직(열축) /수평(행축) 정렬</h2>
+    <pre>
+        그리드 아이템의 세로&세로 너비가 자신이 속한 그리드 행(Track)의 크기보다 작아야 함
+        normal = stretch : 기본값
+        start 
+        center 
+        end 
+        stretch
+    </pre>
+    <div class="container2">
+        <div class="item2">1</div>
+        <div class="item2">2</div>
+        <div class="item2">3</div>
+        <div class="item2">4</div>
+        <div class="item2">5</div>
+        <div class="item2">6</div>
+        <div class="item2">7</div>
+        <div class="item2">8</div>
+        <div class="item2">9</div>
+      </div>
+      
+    
+</body>
+</html>
