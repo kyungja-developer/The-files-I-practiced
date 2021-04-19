@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid</title>
+    <link rel="stylesheet" href="prac26.css">
+</head>
+<body>
+    <h1>그리드 함수들-repeat</h1>
+    <h2>css와 검사창으로 확인하기</h2>
+    <pre>
+        repeat()는 행/열의 크기 정의를 반복함
+        '반복되는 획수' '행/열의 크기 정의'를 인수로 사용
+        grid-template-rosw / grid-template-columns에서 사용
+    </pre>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+
+
+      <hr><hr>
+      <h2>repeat의 같은모습 여러가지 방식(css확인)</h2>
+      <div class="container1">
+        <div class="item1"></div>
+        <div class="item1"></div>
+        <div class="item1"></div>
+        <div class="item1"></div>
+        <div class="item1"></div>
+        <div class="item1"></div>
+        
+      </div>
+      <div class="container2">
+        <div class="item2"></div>
+        <div class="item2"></div>
+        <div class="item2"></div>
+        <div class="item2"></div>
+        <div class="item2"></div>
+        <div class="item2"></div>
+      </div>
+      
+      <div class="container3">
+        <div class="item3"></div>
+        <div class="item3"></div>
+        <div class="item3"></div>
+        <div class="item3"></div>
+        <div class="item3"></div>
+        <div class="item3"></div>
+      </div>
+      <hr>
+      <div class="container4">
+        <div class="item4"></div>
+        <div class="item4"></div>
+        <div class="item4"></div>
+        <div class="item4"></div>
+      </div>
+      
+    <hr><hr>
+    <h1>그리드 함수들-minmax</h1>
+    <h2>행,열의 '최소/최대'크기 정의</h2>
+    <pre>
+        첫번째 인수는 '최솟값', 두번째 인수는 '최댓값' : minmax(최솟값, 최댓값) <-첫번째 열
+        grid-template-rows, grid-template-columns, grid-auto-rows, grid-auto-columns에서 사용
+        일반 요소에 min-width, max-width 속성을 동시에 지정하는 것과 유사
+
+        아래 예시)grid-template-columns : minmax(100px, 1fr) minmax(200px, 1fr);
+    </pre>
+    <div class="container5">
+        <div class="item5"></div>
+        <div class="item5"></div>
+        <div class="item5"></div>
+        <div class="item5"></div>
+    </div>
+      
+
+    <hr><hr>
+    <h1>fit-content</h1>
+    <h2>행/열의 크길르 그리드 아이템(item)이 포함하는 '내용(contents)' 크기에 맞춤</h2>
+    <pre>
+        '내용의 최대 크기'를 인수로 사용
+        minmax(auto, max-content)와 유사
+
+        내용에 맞추긴 하지만 최대크기를 정해놔서 그 정해논 크기를 넘어가면
+        줄바꿈되는 것
+    </pre>
+    <div class="container6">
+        <div class="item6">Hello</div>
+        <div class="item6">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+        <div class="item6">3</div>
+        <div class="item6">4</div>
+    </div>
+      
+    
+</body>
+</html>
