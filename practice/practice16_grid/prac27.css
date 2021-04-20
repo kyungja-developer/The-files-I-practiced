@@ -1,0 +1,26 @@
+.container{
+  border: 10px solid lightgray;
+  display: grid;
+  grid-template-columns: 2fr 1fr 100px 25%;
+}
+.item{
+  border: 10px solid red;
+}
+
+
+
+.container2{
+  border: 10px solid lightgray;
+  display: grid;
+  grid-template-columns: max-content min-content;
+}
+.item2{
+  border: 10px solid red;
+}
+
+.container3{
+  border: 10px solid lightgray;
+  display: grid;
+  grid-template-columns: min-content max-content;
+  word-break: keep-all;
+}
