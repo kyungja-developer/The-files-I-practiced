@@ -1,0 +1,14 @@
+.container{
+  border: 10px solid lightgray;
+  display: grid;
+  /*repeat()함수에서 반복횟수 쓰는 부분에 auto-fill을 쓰면 지정된 범위에서 자동으로 개수가 정해짐 */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-auto-rows: 100px;
+
+  /*minmax가 최소 120px 최대 1fr인데 왜 container를 늘렸을 때 item들이 1대1비율로 전체를 차지하지 않나?
+  (auto-fill일 때) -> 일단 grid 공부한거 쭉 보고 답을 찾아보자*/
+}
+.item{
+  border: 10px solid red;
+  font-size: 20px;
+}
