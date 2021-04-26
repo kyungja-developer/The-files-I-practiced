@@ -121,3 +121,29 @@ console.log(--c);//0
 
 //n++, n--은 우선 보여주고 다음 것에서 더하거나 뺀다
 //++n, --n은 앞의 것을 먼저 더하거나 빼고 값을 보여준다
+
+
+//----------------------------------------
+//NOT == !
+// AND == && 
+//OR == ||
+//우선순위는 ! > && > ||
+
+const a = !true; //!는 특정 boolean을 반전시킨다
+console.log(a);
+
+const b = true & true; //양 쪽의 결과가 둘다 true여야만 값이 true가 된다. 
+console.log(b);
+
+const c = true || false;//둘 중 하나라도 true라면 값은 true
+console.log(c);
+
+const value = !(true && false || true  && false || !false);
+// -> !(true && false || true && false || true);
+// -> !(false || false || true);
+// -> !(false || true)
+// -> !(true)
+// -> 결국은 false
+console.log(value);
+
+
