@@ -123,7 +123,7 @@ console.log(--c);//0
 //++n, --n은 앞의 것을 먼저 더하거나 빼고 값을 보여준다
 
 
-//----------------------------------------
+//-------------------------------------------------------------------------------
 //NOT == !
 // AND == && 
 //OR == ||
@@ -147,3 +147,38 @@ const value = !(true && false || true  && false || !false);
 console.log(value);
 
 
+
+//-------------------------------------------------------------------------------
+//비교연산자 ===와 ==
+const a = null;
+const b = undefined;
+const equals = a == b;
+const same = a === b;
+console.log(equals); //true가 됨
+console.log(same); //false가 됨
+//==는 타입을 구분하지 않기때문에 ===를 써서 두 값이 '일치한다'를 표현해줌
+
+//양 쪽의 값이 일치하지 '않는다' !== / !=
+const a = 1;
+const b = '1';
+const notEquals = a != b;
+const notSame = a !== b;
+console.log(notEquals);  // false
+console.log(notSame);  //true
+
+
+//크고 작음
+const a = 10;
+const b = 15;
+const c = 15;
+
+console.log(a < b); //true
+console.log(b > a); //true
+console.log(b >= a); //ture B가 A 보다 크거나 같다
+console.log(a <= c); //true
+console.log(b < c); //false
+
+//문자열 더하기
+const a = '안녕';
+const b = '하세요';
+console.log(a + b);
