@@ -11,7 +11,7 @@ const dog = {
   name: '멍멍이',
   age: 2,
   cute: true,
-  sample:{
+  sample:{  //또 다른 객체를 넣을 수도 있음
     a:1,
     b:2,
   };
@@ -145,3 +145,103 @@ const dog = {
   //화살표 함수를 쓰면 this가 자신이 속한 곳을 인식하지 못해 오류가 나는 것.
   //객체 속 함수를 꺼내오면 인식하지 못한다
   
+
+
+
+  //getter함수 만들기
+const numbers = {
+  a: 1,
+  b: 2,
+  get sum(){
+    console.log('sum 함수가 실행됩니다!');
+    //get함수에선 무조건 어떤 값을 반환해줘야함
+    return this.a + this.b;
+  } 
+};
+console.log(numbers.sum);
+numbers.b = 5;
+console.log(numbers.sum);
+//getter함수는 특정 값을 조회하려고 할 때(호출이 아니라)
+//특정 코드를 실행시키고 연산된 값을 반환해 조회하는 것.
+
+//setter함수 만들기 - 특정 값을 바꿀 때마다 함수 실행
+//값과 setter함수의 이름이 같을 순 없지만
+//같은 이름의 set과 get함수는 만들 수 있음
+const dog = {
+  _name: '멍멍이',
+  get name(){
+    console.log('_name을 조회합니다..');
+    return this._name;
+  },
+  set name(value){
+    console.log('이름이 바뀝니다..' + value);
+    this._name = value;
+  }
+};
+
+console.log(dog.name);
+dog.name = '뭉뭉이';
+console.log(dog.name);
+
+//다른 예시
+const numbers = {
+  _a: 1,
+  _b: 2,
+  sum: 3,
+  calculate() {
+    console.log("calculate");
+    this.sum = this._a + this._b;
+  },
+  get a() {
+    return this._a;
+  },
+  get b() {
+    return this._b;
+  },
+  set a(value) {
+    this._a = value;
+    this.calculate();
+  },
+  set b(value) {
+    this._b = value;
+    this.calculate();
+  }
+  
+};
+
+console.log(numbers.sum);
+numbers.a = 5;
+numbers.b = 7;
+numbers.a = 9; //값이 바뀔 때마다 함수실행(set함수)
+console.log(numbers.sum);
+
+//이렇게도
+/*
+const numbers = {
+  a: 1,
+  b: 2,
+  sum: 3,
+  calculate() {
+    console.log("calculate");
+    this.sum = this._a + this._b;
+  },
+  get sum() {
+    console.log("sum");
+    return this.a + this.b;
+  }
+};
+
+console.log(numbers.sum);
+numbers.a = 5;
+numbers.b = 7;
+numbers.a = 9;
+console.log(numbers.sum);
+console.log(numbers.sum);
+console.log(numbers.sum);
+console.log(numbers.sum);
+console.log(numbers.sum);
+console.log(numbers.sum);
+console.log(numbers.sum);   <-이렇게 함수를 조회할 때마다 함수를 실행함. 비효율적. 적절히 사용하자
+*/
+
+
