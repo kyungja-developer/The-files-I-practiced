@@ -92,3 +92,16 @@ for (let key in kitty) {
   console.log(`${key}: ${kitty[key]}`); //키와 키값 받아오기
 }
 
+
+
+//continue 
+for (let f = 0; f < 10; f++) {
+  if (f === 2) continue; //특정 조건이 만족됐을 때 그 다음 루프를 하라
+  //이 구간이 스킵됨
+  console.log(f);
+  if(f === 5) break;//이 조건을 만족시키면 멈춰라.
+}
+//if(f === 2) continue;와
+/*
+if(f === 2){continue}는 똑같은 코드임
+한 줄짜리 if문은 {}블록생략 가능 */
