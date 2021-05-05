@@ -105,3 +105,35 @@ for (let f = 0; f < 10; f++) {
 /*
 if(f === 2){continue}는 똑같은 코드임
 한 줄짜리 if문은 {}블록생략 가능 */
+
+
+
+
+//예시1 만들어보기 (함수와 배열, 반복문을 사용하여)
+function sumOf(numbers) {
+  let sum = 0;
+  for (let f = 0; f < numbers.length; f++) {
+    sum += numbers[f]; //+= 는 x += y 가 x = x+y라는 뜻
+  }
+  return sum; //sum의 결과물을 return한다
+}
+const result = sumOf([1, 2, 3, 4, 5]);
+console.log(result);
+
+
+//예시2
+//숫자로 이루어진 배열이 주어졌을 때, 해당 숫자 배열안에 들어있는 숫자 중
+//3보다 큰 숫자로만 이루어진 배열을 새로 만들어서 반환해자.
+function biggerThanThree(numbers) {
+  const arrangement = [];
+  for (let g = 3; g < numbers.length; g++) {
+    if (numbers[g] > 3) {
+      arrangement.push(numbers[g]);
+    }
+  }
+  return arrangement;
+}
+
+const numbers = [1, 2, 3, 4, 5, 6, 7];
+console.log(biggerThanThree(numbers));
+
