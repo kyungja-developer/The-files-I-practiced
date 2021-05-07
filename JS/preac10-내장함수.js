@@ -119,3 +119,12 @@ const todo = todos.find((todo) => todo.done === false);
 console.log(todo); //{id: 4, text: "배열 내장함수 배우기", done: false}
 //find----------------------------------------------------------------------------------
 //이것은 순서가 아니라 그 값 자체를 보여줌
+
+
+//filter
+//파라미터는 함수로!
+const tasksNotDone = todos.filter((todo) => !todo.done//todo.done === false와 같다);
+console.log(tasksNotDone);
+
+//todo.done만 쓰면 true인걸 가져오고
+//todo.done === false면 false인 것만 가져온다
