@@ -128,3 +128,26 @@ console.log(tasksNotDone);
 
 //todo.done만 쓰면 true인걸 가져오고
 //todo.done === false면 false인 것만 가져온다
+
+
+
+
+
+//splice 배열
+//배열에서 특정 항목을 지울때
+/*slice때문에 주석했음
+const numbers = [10, 20, 30, 40];
+const index = numbers.indexOf(30);
+const spliced = numbers.splice(index, 1); //index부터 n개 지우겠다(indexOf는 내가 보고싶은 항목이 몇 번째인지 알려줌)
+console.log(spliced); //splice돼서 지워진 값을 볼 수 있음
+console.log(numbers);
+*/
+
+//slice
+//기존의 배열을 건들이지 않음
+//지정한 것만 잘라옴 복붙처럼
+const numbers = [10, 20, 30, 40];
+
+const sliced = numbers.slice(0, 2);
+console.log(sliced);
+console.log(numbers);
