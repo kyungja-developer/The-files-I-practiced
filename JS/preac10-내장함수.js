@@ -151,3 +151,69 @@ const numbers = [10, 20, 30, 40];
 const sliced = numbers.slice(0, 2);
 console.log(sliced);
 console.log(numbers);
+
+
+
+
+//shift와 pop, unshift
+//shift는 배열의 첫번째 원소를 하나씩 밖으로 꺼냄
+
+const a = [10, 20, 30, 40, 50];
+
+const value = a.shift();
+a.shift();
+a.shift();
+a.shift();
+a.shift();
+a.shift();
+console.log(value); //10
+console.log(a); //20, 30, 40,50
+
+
+
+//pop은 배열의 마지막 부터 하나씩 밖으로 꺼냄
+const b = [10, 20, 30, 40, 50];
+const value = b.pop();
+const value = b.pop();
+const value = b.pop();
+const value = b.pop(); //계속 빼면 에러가 아니고 그냥 비어있는 배열이 됨
+console.log(value);
+console.log(b);
+
+
+//unshift
+const c = [10, 20, 30, 40, 50];
+c.unshift(5); //맨 앞에 ()안의 원소를 배열에 추가함
+console.log(c);
+
+//push와 pop / shift와 unshift가 짝
+const d = [10, 20, 30, 40];
+d.push(50);//마지막에 더함
+const value = d.pop();//마지막거 뺌
+console.log(value);
+console.log(d);
+
+const e = [10, 20, 30, 40];
+e.unshift(0);//맨 앞에 더함
+const value = e.shift();//맨 앞에거 뺌
+console.log(e);
+
+
+
+
+//concat
+
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const concated = [...arr1, ...arr2];
+console.log(arr1);
+console.log(arr2);
+console.log(concated);
+//concat은 기존의 배열을 건드리지 않음
+
+//join - 배열 안에 있는 값들을 문자열 형태로 합쳐줄 때 사용
+const arrr = [1, 2, 3, 4, 5];
+console.log(arrr.join()); //배열을 쉼표 사이사이에 넣어 문자열로 만들어줌
+console.log(arrr.join("!")); //문자열 사이에 무언가 추가 (쉼표 사이에 표시)
+//join의 파라미터에는 배열을 어떻게 구분할지를 정의하는 것을 써줌
+console.log(arrr.join(", "));
