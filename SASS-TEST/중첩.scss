@@ -1,0 +1,50 @@
+.//중첩
+.section{
+    width: 100%;
+    .list{
+        padding: 20px;
+        li{
+            float: left;
+        }
+    }
+}
+//이렇게 중첩되는것. CSS로 컴파일 되는건 뭔래 알던 아래모양
+/*
+.section{
+    width: 100%;
+}
+.section .list{
+    padding: 20px;
+}
+.section .list li{
+    float: left;
+}
+*/
+
+//하지만 그냥 일치선택자식으로 중첩하는건 비효율. 엠퍼센드 사용하면 됨!
+//&(Ampersand - 상위 선택자 참조)를 사용하여 상위(부모) 선택자를 참조하여 치환
+.btn {
+    position: absolute;
+    &.active{           //.btn이라는 클래스를 가진 요소에 active라는 클래스가 붙었을 때 실행
+        color: red;
+    }
+}
+.list{
+    li{
+        &:last-child{               //여기서의 &는 바로 위의 상위요소, 즉 li로 치환돼 li:last-child가 된다
+            margin-right: 0;
+        }
+    }
+}
+/*
+.btn{
+    position: absolute;
+}
+.btn.active{                //일치선택자임. 클래스와 클래스가 붙어서 정의된거
+    color: red;
+}
+.list li:last-child{
+    margin-right: 0;
+}
+*/
+
