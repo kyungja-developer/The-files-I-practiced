@@ -48,3 +48,67 @@
 }
 */
 
+
+
+
+
+//@at-root
+.section{
+    $width: 100px;
+    $height: 200px;
+    width: $width;
+    .item{
+        width:$width;
+        height: $height;
+    }
+    @at-root.box{       //밖에서 만들어져야 하는 .box가 변수를 쓰기 위해 .section안에 기입하면서 @at-root를 붙여줌으로써 최상위 루트로 올라가서 정의된다!
+        width: $width;
+        height: $height;
+    }
+}
+/*
+.section {
+  width: 100px;
+}
+
+.section .item {
+  width: 100px;
+  height: 200px;
+}
+
+.box {
+  width: 100px;
+  height: 200px;
+}
+*/
+
+
+
+
+//중첩된 속성 적는법
+.box{
+    font: {
+        width: bold;
+        size: 10px;
+        family: sans-serif;
+    };
+    margin:{
+        top: 20px;
+        left: 20px;
+    };
+    padding:{
+        bottom: 40px;
+        right: 30px;
+    };
+}
+/*
+.box {
+  font-width: bold;
+  font-size: 10px;
+  font-family: sans-serif;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding-bottom: 40px;
+  padding-right: 30px;
+}
+*/
