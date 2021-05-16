@@ -1,0 +1,119 @@
+//변수이름 앞엔 $를 붙인다
+//$변수이름 : 속성값;
+
+$color-primary: #e96900;
+$url-images: "/assetx/images/";
+$w: 200px;
+
+.box{
+    width: $w;
+    margin-left: $w;
+    background: $color-primary url($url-images+"bg.jpg");
+}
+/*
+.box {
+    width: 200px;
+    margin-left: 200px;
+    background: #e96900 url("/assetx/images/bg.jpg");
+  }
+*/
+
+
+
+
+//변수 유효범위
+//선언된 블록({})내에서만 유효
+
+
+
+//변수 재할당
+//변수를 선언하고 다른 변수를 선언했을 때 또 다른 변수를 할당해서 정의할 수 있다
+
+$red: #ff0000;
+$blue: #0000FF;
+
+$color-primary : $blue;
+$color-dange : $red;
+.box{
+    color: $color-primary;
+    background: $color-danger;
+}
+
+
+
+
+//!global (전역 설정)
+//플래그를 사용하면 변수의 유효범위를 전역(global)로 설정 가능
+.box1{
+    $color: #111 !global;   //이 값을 .box1의 유효범위 안에서만 사용하지 않고 전역으로 사용하겠다
+    background: $color;
+}
+.box2{
+    background: $color;     //그래서 .box1에 있는 변수도 .box2에서 쓸 수 있는 것. 전역변수기 때문에!
+}
+
+//주의할 점
+$color: #000;   //전역으로 설정된 $color값이지만
+.box1{
+    $color: #111 !global;       //이 안에서 재할당 되었기 때문에 이 아래로는 #111을 씀
+    background: $color;
+}
+.box2{
+    background: $color;         //그래서 얘도 #111을 씀.
+}
+.box3{
+    $color: #222;       //하지만 여기선 $color가 #222로 재할당되었기 때문에 .box의 background는 #222를 쓰는것
+    background: $color;
+}
+//기존에 쓰여진 값이 덮어씌어진다!
+//가장 가까운 곳에서 선언된 값으로 설정된다!
+/*
+.box1 {
+  background: #111;
+}
+
+.box2 {
+  background: #111;
+}
+
+.box3 {
+  background: #222;
+}
+*/
+
+
+
+
+
+
+
+
+
+//변수의 초깃값 설정
+//!default(초깃값 설정)
+//!defalut 플래그는 할당되지 않은 변수의 초깃값을 설정
+//즉, 할당돼있는 변수가 있다면 변수가 기존 할당 값을 사용
+$color-primary: red;
+.box{
+    $color-primary: blue !default;  //!deault값이 없었다면 blue로 재할당된거니까 blue가 되는거고 !default값이 있으니까 초기값인 red를 사용
+    background: $color-primary;
+}
+/*
+.box{
+    background: red;        
+}
+*/
+//한마디로, ‘변수와 값을 설정하겠지만, 혹시 기존 변수가 있을 경우는 현재 설정하는 변수의 값은 사용하지 않겠다’
+
+
+
+
+//#{} (문자보간)
+//이걸 사용해서 코드의 어디든지 변수 값을 넣을 수 있음
+$family: unquote("Droid+Sans"); //unquote는 그 인수의 안에있는 값에서 "따옴표를 없애고 변수의 값으로 하겠다는 뜻
+@import url("http://fonts.googleeapis.com/css?family=#{$family}");
+
+/*
+@import url("http://fonts.googleeapis.com/css?family=Droid+Sans");
+*/
+//한마디로, 문자 사이에 변수가 들어갈 공간을 만드는 것
