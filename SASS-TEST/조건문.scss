@@ -1,0 +1,167 @@
+//if(함수)
+/*
+조건의 값(true, false)에 따라 두 개의 표현식 중 하나만 반환합니다.
+조건부 삼항 연산자(conditional ternary operator)와 비슷합니다.
+
+조건의 값이 true이면 표현식1을,
+조건의 값이 false이면 표현식2를 실행합니다.
+
+if(조건, 표현식1, 표현식2)
+*/
+
+$width: 555px;
+div {
+  width: if($width > 300px, $width, null);//null이 값으로 들어가는 건 그 속성을 사용하지 않겠다는 뜻
+}
+/*
+div {
+  width: 555px;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+//@if(지시어)
+/*
+@if 지시어는 조건에 따른 분기 처리가 가능하며, if 문(if statements)과 유사합니다.
+같이 사용할 수 있는 지시어는 @else, if가 있습니다.
+추가 지시어를 사용하면 좀 더 복잡한 조건문을 작성할 수 있습니다.
+*/
+
+
+/*
+    // @if
+@if (조건) {
+    //조건이 참일 때 구문
+  }
+  
+    // @if @else
+
+@if (조건) {
+        //조건이 참일 때 구문
+} @else {
+        //조건이 거짓일 때 구문
+}
+
+    // @if @else if
+
+@if (조건1) {
+        //조건1이 참일 때 구문
+} @else if (조건2) {
+        //조건2가 참일 때 구문
+} @else {
+/모두 거짓일 때 구문
+}
+
+  */
+
+//  조건에 ()는 생략이 가능하기 때문에, () 없이 작성하는 방법이 좀 더 편리할 수 있습니다.
+$bg: true;
+div {
+  @if $bg {
+    background: url("/images/a.jpg");
+  }
+}
+
+//다른예시
+$color: orange;
+div {
+  @if $color == strawberry {
+    color: #FE2E2E;
+  } @else if $color == orange {
+    color: #FE9A2E;
+  } @else if $color == banana {
+    color: #FFFF00;
+  } @else {
+    color: #2A1B0A;
+  }
+}
+/*
+div {
+  color: #FE9A2E;
+}
+*/
+
+
+
+//if 예시
+@function limitSize($size) {
+    @if $size >= 0 and $size <= 200px {
+      @return 200px;
+    } @else {
+      @return 800px;
+    }
+  }
+  
+  div {
+    width: limitSize(180px);
+    height: limitSize(340px);
+  }
+/*
+  div {
+  width: 200px;
+  height: 800px;
+}
+*/
+
+
+
+//다른 if예시
+@mixin pCenter($w, $h, $p: absolute) {
+    @if
+      $p == absolute
+      or $p == fixed
+      or not $p == relative
+      or not $p == static
+    {           //unitless 단위가 있는지 없는지 확인. 없으면 true
+      width: if(unitless($w), #{$w}px, $w);             //if(1, 2, 3) = if(조건, 조건이 true면 이거, false면 이거 출력)
+      height: if(unitless($h), #{$h}px, $h);            //#{}문자보간! = 변수를 껴넣기 위한 것
+      position: $p;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+  
+  .box1 {
+    @include pCenter(10px, 20px);
+  }
+  .box2 {
+    @include pCenter(50, 50, fixed);
+  }
+  .box3 {
+    @include pCenter(100, 200, relative);
+  }
+  /*
+  .box1 {
+  width: 10px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.box2 {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+*/

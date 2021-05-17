@@ -1,0 +1,101 @@
+//함수(Function)
+/*
+자신의 함수를 정의하여 사용할 수 있습니다.
+함수와 Mixins은 거의 유사하지만 반환되는 내용이 다릅니다.
+
+Mixin은 위에서 살펴본 대로 지정한 스타일(Style)을 반환하는 반면,
+함수는 보통 연산된(Computed) 특정 값을 @return 지시어를 통해 반환합니다.
+
+
+// Mixins
+@mixin 믹스인이름($매개변수) {
+  스타일;
+}
+-> 속성: 값;으로 이루어짐
+
+// Functions
+@function 함수이름($매개변수) {
+  @return 값
+}
+-> 얘는 값을 반환함
+*/
+
+
+/*
+사용하는 방법에도 차이가 있습니다.
+Mixin은 @include 지시어를 사용하는 반면,
+함수는 함수이름으로 바로 사용합니다.
+
+// Mixin
+@include 믹스인이름(인수);
+
+// Functions
+함수이름(인수)
+->괄호 여닫기 중요!
+*/
+
+
+@function columns($number: 1, $columns: 12, $width: 1200px){
+    @return $width * ($number / $columns);
+}
+.container{
+    $width: 980px;
+    width: $width;
+    .item:nth-child(1){
+        width: columns();   //기본값 받아옴
+    }
+    .item:nth-child(2){
+        width: columns(8); // width를 .container안에서 정의했음
+    }
+    .item:nth-child(3){
+        width: columns(3);
+    }
+}
+
+/*
+.container {
+  width: 980px;
+}
+
+.container .item:nth-child(1) {
+  width: 100px;
+}
+
+.container .item:nth-child(2) {
+  width: 800px;
+}
+
+.container .item:nth-child(3) {
+  width: 300px;
+}
+
+*/
+
+
+
+
+
+//함수이름 중복
+/*
+위와 같이 함수는 @include 같은 별도의 지시어 없이 사용하기 때문에 내가 지정한 함수와 내장 함수(Built-in Functions)의 이름이 충돌할 수 있습니다.
+따라서 내가 지정한 함수에는 별도의 접두어를 붙여주는 것이 좋습니다.
+
+내장 함수란, 응용 프로그램에 내장되어 있으며 최종 사용자가 액세스 할 수 있는 기능입니다.
+예를 들어, 대부분의 스프레드 시트 응용 프로그램은 행이나 열의 모든 셀을 추가하는 내장 SUM 함수를 지원합니다.
+
+예를 들어, 색의 빨강 성분을 가져오는 내장 함수로 이미 red()가 있습니다.
+같은 이름을 사용하여 함수를 정의하면 이름이 충돌하기 때문에 별도의 접두어를 붙여 extract-red() 같은 이름을 만들 수 있습니다.
+*/
+
+// 내가 정의한 함수
+@function extract-red($color) {
+    // 내장 함수
+    @return rgb(red($color), 0, 0);
+  }
+  
+  div {
+    color: extract-red(#D55A93);
+  }
+
+  //혹은 모든 내장 함수의 이름을 다 알고 있을 수 없기 때문에 특별한 이름을 접두어로 사용할 수도 있습니다.
+//my-custom-func-red() 처럼
